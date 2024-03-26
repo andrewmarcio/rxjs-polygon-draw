@@ -18,9 +18,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["./components/index"],
+      "@observables": ["./libs/observables/index"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "exclude": [
+    "node_modules", "config-overrides"
+  ],
+  "include": ["./src/**/*"]
 }
